@@ -1,0 +1,29 @@
+# import MenuItem from '../shared/Menu.graphql'
+# import AWSDateTime from '../shared/Root.graphql'
+# import AWSURL from '../shared/Root.graphql'
+
+input MenuItemImageInput {
+  url: AWSURL!
+}
+
+input CreateMenuItemInput {
+  organizationId: ID!
+  name: String!
+  description: String
+  price: Float
+  image: MenuItemImageInput
+}
+
+extend type MenuItem {
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  organizationId: ID!
+}
+
+type CreateMenuItemOutput {
+  menuItem: MenuItem!
+}
+
+extend type Mutation {
+  createMenuItem(input: CreateMenuItemInput!): CreateMenuItemOutput!
+}

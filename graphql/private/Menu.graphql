@@ -1,0 +1,30 @@
+# import Menu from '../shared/Menu.graphql'
+# import AWSDateTime from '../shared/Root.graphql'
+
+input SectionInputMenuItem {
+  id: ID!
+}
+
+input SectionInput {
+  name: String!
+  menuItems: [SectionInputMenuItem!]!
+}
+
+input CreateMenuInput {
+  organizationId: ID!
+  name: String!
+  sections: [SectionInput!]!
+}
+
+extend type Menu {
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type CreateMenuOutput {
+  menu: Menu!
+}
+
+extend type Mutation {
+  createMenu(input: CreateMenuInput!): CreateMenuOutput!
+}

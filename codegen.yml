@@ -1,0 +1,24 @@
+overwrite: true
+documents: null
+generates:
+  graphql/public/types.generated.ts:
+    schema: "graphql/public/*.graphql"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+  graphql/private/types.generated.ts:
+    schema: "graphql/private/*.graphql"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+  graphql/shared/types.generated.ts:
+    schema: "graphql/shared/*.graphql"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+config:
+  scalars:
+    AWSDateTime: string
+    AWSURL: string
+  mappers:
+    Section: ../overrides#ResolvedSection

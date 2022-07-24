@@ -1,0 +1,4 @@
+extend type Query {
+  # NOTE: not implemented
+  myPublicQuery: Boolean!
+}

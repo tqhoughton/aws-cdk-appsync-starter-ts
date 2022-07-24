@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "author": "N/A",
+  "license": "ISC",
+  "devDependencies": {
+    "amplify-appsync-simulator": "^2.4.1"
+  }
+}

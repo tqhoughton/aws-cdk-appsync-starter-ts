@@ -1,0 +1,19 @@
+type Organization {
+  id: ID!
+  name: String!
+  owner: ID!
+  members: [ID!]!
+}
+
+input CreateOrganizationInput {
+  name: String!
+  members: [ID!]!
+}
+
+type CreateOrganizationOutput {
+  organization: Organization!
+}
+
+extend type Mutation {
+  createOrganization(input: CreateOrganizationInput!): CreateOrganizationOutput!
+}

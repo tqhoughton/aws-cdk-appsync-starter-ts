@@ -1,0 +1,17 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# GraphQL generated TS files
+.generated.ts
+
+# Compiled GQL schemas
+build/
+
+# Tokens for testing the API
+*.token

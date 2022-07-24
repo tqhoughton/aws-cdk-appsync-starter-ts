@@ -1,0 +1,28 @@
+type Menu {
+  organizationId: ID!
+  id: ID!
+  name: String!
+  sections: [Section!]!
+}
+
+type Section {
+  id: ID!
+  name: String!
+  menuItems: [MenuItem!]!
+}
+
+type MenuItemImage {
+  url: String!
+}
+
+type MenuItem {
+  id: ID!
+  name: String!
+  description: String
+  image: MenuItemImage
+  price: Float
+}
+
+extend type Query {
+  getMenu(id: ID!): Menu
+}
