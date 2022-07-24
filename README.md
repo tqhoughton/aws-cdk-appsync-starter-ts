@@ -24,11 +24,11 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Project Structure
 
-`bin` and `lib` - AWS CDK folders used to deploy your cloud infrastructure
-`graphql` - defines your AppSync API GraphQL Schema
-`src` - defines any Lambda function code needed to support your resolvers
-`test` - tests your AppSync API using `amplify-appsync-simulator`
-`utils` - utils for making testing the deployed APIs easier.
+- `bin` and `lib` - AWS CDK folders used to deploy your cloud infrastructure
+- `graphql` - defines your AppSync API GraphQL Schema
+- `src` - defines any Lambda function code needed to support your resolvers
+- `test` - tests your AppSync API using `amplify-appsync-simulator`
+- `utils` - utils for making testing the deployed APIs easier.
 
 ## How to use this project
 
@@ -51,8 +51,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Testing
 
-This project utilizes `amplify-appsync-simulator` to simulate your AppSync APIs to test against locally using `jest` and `supertest`.
-To run the tests.
+This project utilizes `amplify-appsync-simulator` to simulate your AppSync APIs to test against locally using `jest` and `supertest` to run the tests.
 
 There is currently an issue with `amplify-appsync-simulator` that prevents you from installing it alongside other projects that depend on `graphql`, issue created here: https://github.com/aws-amplify/amplify-category-api/issues/692
 
